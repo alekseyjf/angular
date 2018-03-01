@@ -5,12 +5,14 @@ import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ColorsComponent } from './colors/colors.component';
+import { RgbPipe } from './rgb.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ColorsComponent
+    ColorsComponent,
+    RgbPipe
   ],
   imports: [
     BrowserModule,
