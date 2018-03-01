@@ -1,3 +1,7 @@
 <p>
-  colors works!
+  colors works! {{name}}
 </p>
+<button (click)="setName()">World</button>
+<input type="text" class="form-control" id="name"
+       required
+       [(ngModel)]="name" name="name">
