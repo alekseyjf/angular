@@ -1,4 +1,4 @@
-import {Component, OnInit, OnChanges} from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 import { Color } from './../models/colors';
 
 @Component({
@@ -7,6 +7,7 @@ import { Color } from './../models/colors';
   styleUrls: ['./colors.component.scss']
 })
 export class ColorsComponent implements OnInit{
+    @Input() defaultColor: color;
     color: Color;
     constructor(){
         this.color = {
@@ -15,13 +16,23 @@ export class ColorsComponent implements OnInit{
             blue: 255
         }
     }
+
+    clicksCount: number
+    @Output() colorChanged = new EventEmitter<number>()
+
     getColor():string {
         return `rgb(${this.color.red}, ${this.color.green},${this.color.blue})`;
     }
     ngOnInit(){
+        this.color = this.defaultColor;
         console.log('init');
     }
     ngOnChanges(){
         console.log('changes');
     }
+
+    panelClicked(){
+
+    }
+
 }

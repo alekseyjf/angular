@@ -6,13 +6,15 @@ import { FormsModule }   from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ColorsComponent } from './colors/colors.component';
 import { RgbPipe } from './rgb.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ColorsComponent,
-    RgbPipe
+    RgbPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
