@@ -1,5 +1,5 @@
-export interface Colors {
-    red: string;
-    green: string;
-    blue: string;
+export class Colors {
+    red: number;
+    green: number;
+    blue: number;
 }
