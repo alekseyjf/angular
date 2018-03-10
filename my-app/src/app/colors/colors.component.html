@@ -1,3 +1,24 @@
 <p>
   colors works!
 </p>
+{{ color | rgb }}
+{{ color.red }}
+{{ color.green }}
+{{ color.blue }}
+<div
+        [style.background-color]="getColor()"></div>
+<div
+         [appHighlight]="color | rgb"
+></div>
+<input type="number"
+       required
+       [(ngModel)]="color.red"
+><br>
+<input type="number"
+       required
+       [(ngModel)]="color.green"
+><br>
+<input type="number"
+       required
+       [(ngModel)]="color.blue"
+><br>

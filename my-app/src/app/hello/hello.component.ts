@@ -10,15 +10,12 @@ export class HelloComponent implements OnInit {
   constructor() { }
 
 
-  getName(name){
+  /*getName(name){
     this.name = name;
-  }
+  }*/
 
   setName(){
     this.name = 'World'
-  }
-
-  ngOnInit() {
   }
 
   ngOnInit() {
