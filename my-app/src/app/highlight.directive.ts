@@ -1,9 +1,9 @@
-import {Directive, ElementRef, HostListener, Input } from '@angular/core';
+import {Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
 
 @Directive({
     selector: '[appHighlight]'
 })
-export class HighlightDirective {
+export class HighlightDirective implements OnInit {
 
     @HostListener('mouseenter') onMouseEnter() {
         this.highlight(this.highlightColor);
@@ -13,8 +13,7 @@ export class HighlightDirective {
         this.highlight('orange');
     }
 
-    @Input('appHighlight') highlightColor: string
-    //@Input() : string
+    @Input('appHighlight') highlightColor: string;
 
     constructor(private el: ElementRef) {
         console.log('highlight', this.el, this.highlightColor);
@@ -24,4 +23,7 @@ export class HighlightDirective {
         this.el.nativeElement.style.backgroundColor = color;
     }
 
+    ngOnInit(){
+        console.log(2, this.highlightColor);
+    }
 }

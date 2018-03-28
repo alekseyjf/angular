@@ -8,8 +8,10 @@
 <div
         [style.background-color]="getColor()"></div>
 <div
-         [appHighlight]="color | rgb"
+        (click)="panelClicked()"
+        [appHighlight]="color | rgb"
 ></div>
+<button (click)="setName()">my name</button>
 <input type="number"
        required
        [(ngModel)]="color.red"
