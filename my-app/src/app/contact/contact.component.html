@@ -1,0 +1,15 @@
+<p>
+  contacts works!
+</p>
+<!--<div *ngIf="userList">-->
+
+
+<app-contact-list [contactUser]="userList" (userItem)="getUser($event)"></app-contact-list>
+<div *ngIf="userSelect">
+  <app-contact-details [userOpt]="userSelect"></app-contact-details>
+</div>
+<div>
+  <app-contact-edit [userInput]="userSelect"></app-contact-edit>
+</div>
+
+<!--</div>-->

@@ -1,0 +1,9 @@
+<p>
+  contact-list works!
+</p>
+<ul class="user-list" *ngIf="userList">
+  <li class="user-list__item" (click)="getUser(item)" *ngFor="let item of userList">
+    <p>{{item.name}}</p>
+    <p>{{item.surname}}</p>
+  </li>
+</ul>
